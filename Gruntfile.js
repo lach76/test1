@@ -7,9 +7,10 @@
 // 'test/spec/{,*/}*.js'
 // If you want to recursively match all subfolders, use:
 // 'test/spec/**/*.js'
-
 module.exports = function (grunt) {
 
+  require('jit-grunt')(grunt);
+  grunt.loadNpmTasks('grunt-build-control');
   var pkg = require('./package.json');
 
   // Time how long tasks take. Can help when optimizing build times
